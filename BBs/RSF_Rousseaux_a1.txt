@@ -1,0 +1,137 @@
+Lib_ID: a_a1
+
+Synthon SMARTS:
+R1_A1 *-[CH2]-[CH2]-[OH]
+R1_A2 [C,H][CX3;!R](=O)[OX2H0][C]
+R1_A3 *-[CH2]-[CH2]-[Br]
+R1_B [#6]-[NX3H1]-[#6]
+end
+
+Allow Multiple Symmetric Synthons:
+end
+
+
+Global Exclusion SMARTS:
+S(=O)(=O)-,:[Cl,Br]
+N=C=N
+FB(F)F
+[#14&H1,#14&H2,#14&H3]
+P=C
+[Si]-[I,Br,Cl,F]
+S(=O)(=O)F
+O=C-,:N=[N&+]=[N&-]
+O-,:[Cl](-,:O)(-,:O)-,:O
+O-,:S(=O)(=O)-,:C(-,:F)(-,:F)-,:F
+C(=O)-,:O-,:c1:,-c(-,:F):,-c(-,:F):,-c(-,:F):,-c(-,:F):,-c:,-1-,:F
+C(=O)-,:O-,:n:,-n:,-n
+[CX4]C(=O)Cl
+c-,:P-,:c
+N=C=[S,O]
+P=S
+[CX4]C(=O)I
+[CX3]C(=O)Cl
+[CX3][N+]#[C-]
+N#C-,:C-,:[O&H1]
+[CX4][N+]#[C-]
+O-,:O
+S-,:S
+[C&X4;C&H1,C&H2]-I
+N#C-,:C=C
+[P,S]-,:[Cl,Br,F,I]
+S-,:C#N
+[C&X4;C&H1,C&H2]-[Cl]
+[CX3]C(=O)I
+[N&R0]-,:[N&R0]-,:C=O
+N-,:P(=O)(-,:N)-,:N
+[OX2H1][BX3][OX2H1]
+[S,C](=[O,S])-,:[F,Br,Cl,I]
+C(=O)-,:O-,:c1:,-c:,-c:,-c(-,:[N+](=O)[O-]):,-c:,-c:,-1
+[CX2]#N
+end
+
+
+Synthon Specific Exclusion SMARTS:
+R1_A1
+[OH].[OH]
+[NX3;H2,H1]
+[NX3;H2,H1;R]
+[nX3;H2,H1;R]
+[#5]
+C1N=N1
+[N+](=O)[O-]
+[#7][#6]=[#8]
+[P](=O)
+[c]-[Br]
+[c]-[SH]
+[c]-[OH]
+[S]=[O]
+[N-]=[N+]
+[C]=[O]
+end
+
+R1_A2
+[C,H][CX3;!R](=O)[OX2H0][C].[C,H][CX3;!R](=O)[OX2H0][C]
+[OH]
+[NH]
+[NH2]
+[CX3]=[NX2]-[CX4]
+[CX3]=[SX1]
+[#6][#6](=O)[#6]
+[#7][#6](=O)
+[C][C](=O)[H]
+[S]=[O]
+[P]=[O]
+[N-]=[N+]
+[N+]
+[n+]
+[C]1O[C]1
+[N+](=O)[O-]
+[SH]
+[CX4][F,Cl,I]
+end
+
+R1_A3
+[CH2]-[CH2]-[Br].[C][Br]
+[OH]
+[NX3;H2,H1]
+[NX3;H2,H1;R]
+[nX3;H2,H1;R]
+[CX3]=[NX2]-[CX4]
+[CX3]=[SX1]
+[#6][#6](=O)
+[S]=[O]
+[N-]=[N+]
+[N+]
+[n+]
+[#5]
+C1N=N1
+[N+](=O)[O-]
+[#7][#6]=[#8]
+[P](=O)
+[SH]
+[C]1O[C]1
+[CX4][F,Cl,I]
+end
+
+R1_B
+[#6]-[NX3H1]-[#6].[#6]-[NX3H1]-[#6]
+[#6]-[NX3H1]-[#6].[NX3H2]
+[#6]-[NX3H1]-[#6].[NX3][CX3](=[OX1])[#6]
+[CX3]=[OX1]
+[CX3](=[OX1])[OX2H,OX2R]
+[CX3]=[NX2]-[CX4]
+[CX3]=[SX1]
+[CX4]-[Br]
+[OH]
+[nH]
+[#5]
+[N+](=O)[O-]
+[P](=O)
+C1OC1
+[HN]=[C]
+
+end
+
+Max Heavy Atom Count:
+R1_A 30
+R1_B 30
